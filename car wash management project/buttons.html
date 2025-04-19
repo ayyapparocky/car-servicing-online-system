@@ -1,0 +1,71 @@
+
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home Page</title>
+    <style>
+        body {
+            background-image:url('buttons.jpg');
+            background-size: 100% 100%;
+            background-position: center;
+            background-repeat:  no-repeat;
+            font-family: Arial, sans-serif;
+            background-color: #18a2a9;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        
+
+        h2 {
+            margin-bottom: 30px;
+            color: #fc0ec8;
+        }
+
+        .btn {
+            display: block;
+            width: 250px;
+            margin: 15px auto;
+            padding: 15px 0;
+            font-size: 16px;
+            background-color: rgb(12, 150, 235);
+            color: #3e07a3;
+            text-decoration: none;
+            text-align: center;
+            border: none;
+            border-radius: 8px;
+            transition: background-color 0.3s ease;
+            cursor: pointer;
+        }
+        .btn:active {
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.4);
+    transform: scale(0.98); /* optional: adds a subtle press effect */
+        }
+
+
+        .btn:hover {
+    background-color: #0056b3;
+    box-shadow: 0 0 20px 6px white; /* 💡 White glow around the button */
+}
+
+    </style>
+</head>
+<body>
+
+    <div class="container">
+        <h2>Welcome to Our System</h2>
+
+        <!-- Buttons with links to corresponding pages -->
+        <a href="admin.html" class="btn">Admin Login</a>
+        <a href="login.html" class="btn">User Login</a>
+        <a href="register.html" class="btn">User Registration</a>
+    </div>
+
+</body>
+</html>

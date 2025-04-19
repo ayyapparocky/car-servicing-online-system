@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Login Form</title>
+  <style>
+    h2 {
+      font-family: sans-serif;
+    }
+    body {
+      background: url('admin.jpg');
+      background-size: 100% 100%;
+      background-repeat: no-repeat;
+      font-family: Arial, sans-serif;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+    }
+    .login-container {
+      padding: 30px;
+      border-radius: 10px;
+      width: 300px;
+    }
+    .login-container h2 {
+      text-align: center;
+      margin-bottom: 20px;
+    }
+    .form-group {
+      margin-bottom: 15px;
+    }
+    .form-group label {
+      display: block;
+      font-weight: bold;
+      margin-bottom: 5px;
+    }
+    .form-group input {
+      width: 100%;
+      padding: 10px;
+      border-radius: 999px; /* Oval shape */
+      border: 1px solid #ccc;
+    }
+    .form-group input[type="submit"] {
+      background-color: #06c9b9;
+      color: white;
+      border: none;
+      cursor: pointer;
+      width: 108%;
+      font-weight: bold;
+      transition: background-color 0.3s ease;
+      margin-top: 10px;
+    }
+    .form-group input[type="submit"]:hover {
+      background-color: #5107db;
+    }
+  </style>
+</head>
+<body>
+
+  <div class="login-container">
+    <h2>ADMIN LOGIN</h2>
+    <form action="admin.php" method="POST">
+      <div class="form-group">
+        <label for="email">Email:</label>
+        <input type="email" id="email" name="email" required>
+      </div>
+      
+      <div class="form-group">
+        <label for="password">Password:</label>
+        <input type="password" id="password" name="password" required>
+      </div>
+      
+      <div class="form-group">
+        <input type="submit" value="Login">
+      </div>
+    </form>
+  </div>
+
+</body>
+</html>
