@@ -1,15 +1,18 @@
-# Use official PHP with Apache image
+# Base image with Apache and PHP
 FROM php:7.4-apache
 
-# Copy project files to the Apache root directory
+# Copy all files into Apache root
 COPY . /var/www/html/
 
-# Install MySQLi extension (if needed)
+# Install PHP extensions if needed
 RUN docker-php-ext-install mysqli
 
-# Set index.php as the default file
-RUN echo "DirectoryIndex index.php index.html" >> /etc/apache2/apache2.conf
+# Enable Apache rewrite and PHP handling
+RUN a2enmod rewrite
 
-# Optional: Set proper permissions (especially useful on Render)
+# Ensure Apache uses index.php by default
+RUN echo "<IfModule dir_module>\n    DirectoryIndex index.php index.html\n</IfModule>" > /etc/apache2/mods-enabled/dir.conf
+
+# Optional: Set ownership and permissions
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html
